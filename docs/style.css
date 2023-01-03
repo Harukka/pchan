@@ -3,16 +3,14 @@ h1{
     color: black;
     font-family: "Hiragino Kaku Gothic Pro"
 }
-.face{
-    text-align: center;
-    width:50%;
-}
+
 .social{
     color: black;
     text-align: center;
-    font-family: "Hiragino Kaku Gothic Pro";
+    font-family: "MS Pゴシック",sans-serif;
 }
-body{
-    background-image: url("https://github.com/Harukka/volumevoyager/blob/main/face.png?raw=true");
-    background-size: cover;
+.pchan{
+    color: black;
+    text-align: center;
+    font-family: "MS Pゴシック",sans-serif;
 }
