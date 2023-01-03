@@ -13,6 +13,6 @@ h1{
     font-family: "Hiragino Kaku Gothic Pro";
 }
 body{
-    background-image: url("/docs/face.png");
+    background-image: url("Harukka/volumevoyager/face.png");
     background-size: cover;
 }
