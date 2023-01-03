@@ -1,6 +1,10 @@
 h1{
     color: darkslategray;
 }
+.face{
+    text-align: center;
+    width:50%;
+}
 .social{
     color: olive;
     text-align: center;
