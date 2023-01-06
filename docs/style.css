@@ -1,10 +1,16 @@
 .social{
+    display:flex;
+    flex-flow: column;
     color: black;
-    text-align: center;
+    text-align: right;
     font-family: "MS Pゴシック",sans-serif;
 }
 .pchan{
     color: black;
     text-align: center;
     font-family: "MS Pゴシック",sans-serif;
+}
+.btn btn-outline-info btn-lg{
+    width:10px;
+
 }
