@@ -1,5 +1,5 @@
 .social{
-    display:flex;
+    display:block;
     flex-flow: column;
     color: black;
     text-align: right;
