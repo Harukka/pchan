@@ -1,13 +1,19 @@
+//グローバル変数（関数の外で定義）
+let counter, btnAdd;
+//グローバル変数だから2か所で使っている
+let n;
 
-function count(){
-    //現在の値を取得
-    var thisCount = $("#count").html();
-    
-    //文字列から数値に変換
-        thisCount = Number(thisCount);
-        //取得した数値に＋１
-        thisCount = thisCount +1;
-    //計算した値を上書き
-    $("#count").html(thisCount);
- 
+function addCount(){
+    n++;
+    counter.innerHTML = n;
 }
+
+window.addEventListener("load",()=>{
+    //起動時の処理（画面をロードしたらリセットされる）
+    counter = document.getElementById("counter");
+    btnAdd = document.getElementById("btnAdd");
+    n=0;
+    //+を押したらAddCountを呼び出す
+    btnAdd.addEventListener("click",addCount);
+
+});
