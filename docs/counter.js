@@ -9,5 +9,6 @@ function count(){
         //取得した数値に＋１
         thisCount = thisCount +1;
     //計算した値を上書き
-    $("#count").html(thisCount);
+    //$("#count").html(thisCount);
+    document.getElementById('count')=thisCount;
 }
