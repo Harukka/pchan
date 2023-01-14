@@ -1,6 +1,7 @@
 
 function count(){
     //現在の値を取得
+    var thisCount;
     var thisCount = $("#count").html();
         //文字列から数値に変換
         thisCount = Number(thisCount);
