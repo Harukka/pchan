@@ -13,3 +13,13 @@
 a{
     display: block;
 }
+#counter{
+    width: 50%;
+    padding: 1em 0;
+    font-size: large;
+    text-align: center;
+}
+#btnAdd{
+    width: 50%;
+    font-size: large;
+}
