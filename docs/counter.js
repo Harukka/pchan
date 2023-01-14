@@ -1,19 +1,19 @@
 //グローバル変数（関数の外で定義）
-let counter, btnAdd;
+let counterEl, btnAddEl;
 //グローバル変数だから2か所で使っている
 let n;
 
 function addCount(){
     n++;
-    counter.innerHTML = n;
+    counterEl.innerHTML = n;
 }
 
 window.addEventListener("load",()=>{
     //起動時の処理（画面をロードしたらリセットされる）
-    counter = document.getElementById("counter");
-    btnAdd = document.getElementById("btnAdd");
+    counterEl = document.getElementById("counter");
+    btnAddEl = document.getElementById("btnAdd");
     n=0;
     //+を押したらAddCountを呼び出す
-    btnAdd.addEventListener("click",addCount);
+    btnAddEl.addEventListener("click", addCount);
 
 });
