@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--  https://harukka.github.io/pchan/todo.html -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            ul{
+                list-style-type: none;
+                padding: 0px;
+            }
+        </style>
+        <title>ToDo</title>
+    </head>
+    <body>
+
+        <div class="container">
+            <div id="taskForm" class="row mt-2">
+                <div class="col-md-6 offset-md-2 col-sm-12">
+                    <input type="text" class="form-control" >
+                </div>
+                <div class="col-md-2 col-sm-12">
+                    <input type="button" value="Add" class="form-control btn btn-danger">
+                </div>
+            </div>
+
+
+            <ul id="taskList" class="col-md-8 offset-md-2 list-group list-group list-group-flush"></ul>
+            <script src="todo.js"></script>
+            
+        </div>
+    </body>
+</html>

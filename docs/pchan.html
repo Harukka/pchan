@@ -3,22 +3,89 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-        <link href="style.css" rel="stylesheet" type="text/css" media="all">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link
+        href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+        rel="stylesheet"
+        />
+        <link href="style.css" rel="stylesheet" type="text/css" media="all">
+      
         <title>Pchan</title>
     </head>
     <body>
-        <div class="pchan">    
-            <h1><a href="index.html">Pchan</a></button></h1><br>    
-            <p>Born in <a href="https://goo.gl/maps/dh66XG5taSMZS7C77">Yokohama</a>. </p>
-            <p>Grew up in <a href="https://goo.gl/maps/ZYvogsYQYWSye6bx5">Miura</a>. </p>
-            <p>Living with <a href="https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss">Hearing loss</a>. </p>
-<br>
-            <p>♡Favorite things♡</p>
-            <p>Mahjong</p>
-            <p>Tea ceremony</p>
-            <p>二度寝</p>
-            </ul>
+        <!-- navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <h2 class="text-white">Pchan</h2>
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="C:\Users\pippi\code\pchan\docs\portfolio.html">NIDONE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">SANDONE</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">YONDONE</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+ 
+        <div class="pchan vh-100 d-flex align-items-center"> 
+            <div class="container ">
+                <div style="margin-top :250px;"></div> 
+                <div class="row ">  
+                    <div class="col-lg-6 mx-auto">
+                        <div class="container">
+                            <div class="row">    
+                                <div class="col-md-10">
+                                    <h1><a href="index.html">Pchan</a></button></h1><br>
+                                    <h6>
+                                        <p>Born in <a href="https://goo.gl/maps/dh66XG5taSMZS7C77">Yokohama</a>. </p>
+                                        <p>Grew up in <a href="https://goo.gl/maps/ZYvogsYQYWSye6bx5">Miura</a>. </p>
+                                        <p>Living with <a href="https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss">Hearing loss</a>. </p>
+                                        <p>♡learning♡</p>
+                                        <p>Mahjong</p>
+                                        <p>Tea ceremony</p>
+                                        <p>Programming</p>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mx-auto">
+                        <div class="col-img2 img-fluid"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </body>
