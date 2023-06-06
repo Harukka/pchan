@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audiogram Hearing Test</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <table id="audiogramTable">
+    <thead>
+      <tr>
+        <th>周波数 (Hz)</th>
+        <th>左耳</th>
+        <th>右耳</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>250</td>
+        <td><input type="number" class="leftEarInput" min="0" max="100" placeholder="聴力レベル（左耳）"></td>
+        <td><input type="number" class="rightEarInput" min="0" max="100" placeholder="聴力レベル（右耳）"></td>
+      </tr>
+      <tr>
+        <td>500</td>
+        <td><input type="number" class="leftEarInput" min="0" max="100" placeholder="聴力レベル（左耳）"></td>
+        <td><input type="number" class="rightEarInput" min="0" max="100" placeholder="聴力レベル（右耳）"></td>
+      </tr>
+      <tr>
+        <td>1000</td>
+        <td><input type="number" class="leftEarInput" min="0" max="100" placeholder="聴力レベル（左耳）"></td>
+        <td><input type="number" class="rightEarInput" min="0" max="100" placeholder="聴力レベル（右耳）"></td>
+      </tr>
+      <tr>
+        <td>2000</td>
+        <td><input type="number" class="leftEarInput" min="0" max="100" placeholder="聴力レベル（左耳）"></td>
+        <td><input type="number" class="rightEarInput" min="0" max="100" placeholder="聴力レベル（右耳）"></td>
+      </tr>
+      <tr>
+        <td>4000</td>
+        <td><input type="number" class="leftEarInput" min="0" max="100" placeholder="聴力レベル（左耳）"></td>
+        <td><input type="number" class="rightEarInput" min="0" max="100" placeholder="聴力レベル（右耳）"></td>
+      </tr>
+      <tr>
+        <td>8000</td>
+        <td><input type="number" class="leftEarInput" min="0" max="100" placeholder="聴力レベル（左耳）"></td>
+        <td><input type="number" class="rightEarInput" min="0" max="100" placeholder="聴力レベル（右耳）"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button id="updateButton">更新</button>
+
+  <canvas id="audiogramChart"></canvas>
+
+  <script>
+    // JavaScriptコード
+    var audiogramData = {
+      labels: ["250", "500", "1000", "2000", "4000", "8000"],
+      datasets: [{
+        label: "左耳",
+        data: [0, 0, 0, 0, 0, 0], // 初期値は0としておく
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1
+      }, {
+        label: "右耳",
+        data: [0, 0, 0, 0, 0, 0], // 初期値は0としておく
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1
+      }]
+    };
+
+    var audiogramChart = new Chart("audiogramChart", {
+  type: "line",
+  data: audiogramData,
+  options: {
+    scales: {
+      y: {
+        title: {
+          display: true,
+          text: "聴力レベル（dB）"
+        },
+        suggestedMin: 0,
+        suggestedMax: 100
+      },
+      x: {
+        title: {
+          display: true,
+          text: "周波数（Hz）"
+        },
+        ticks: {
+          maxRotation: 0,
+          autoSkip: true,
+          maxTicksLimit: 6
+        },
+        grid: {
+          display: false
+        }
+      }
+    },
+    layout: {
+      padding: {
+        left: 100,
+        right: 100,
+        top: 0,
+        bottom: 0
+      }
+    }
+  }
+});
+
+    var updateButton = document.getElementById("updateButton");
+    updateButton.addEventListener("click", function() {
+      updateChartData();
+    });
+
+    function updateChartData() {
+      var leftEarInputs = document.getElementsByClassName("leftEarInput");
+      var rightEarInputs = document.getElementsByClassName("rightEarInput");
+
+      var leftEarData = [];
+      var rightEarData = [];
+
+      for (var i = 0; i < leftEarInputs.length; i++) {
+        leftEarData.push(parseInt(leftEarInputs[i].value, 10));
+        rightEarData.push(parseInt(rightEarInputs[i].value, 10));
+      }
+
+      audiogramChart.data.datasets[0].data = leftEarData;
+      audiogramChart.data.datasets[1].data = rightEarData;
+      audiogramChart.update();
+    }
+  </script>
+</body>
+</html>
